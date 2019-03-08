@@ -10,3 +10,8 @@
 
 This repository provides scripts that can allow you to validate
 academic references in a .docx file using the =python-docx= package.
+
+* Requirements
+
+- Python 3
+- =python-docx=
