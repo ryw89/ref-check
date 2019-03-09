@@ -47,10 +47,14 @@ for i, par in enumerate(doc.paragraphs):
         break
 
 # Add to error messages if not found
-if not ref_loc:
+try:
+    ref_loc
+except NameError:
     err.append(('"{}" section not found.'.format(ref_section_name)))
 
-if not tablefig_loc:
+try:
+    tablefig_loc
+except NameError:
     err.append(('"{}" section not found.'.format(tablefig_section_name)))
 
 # Exit now if sections not found. Printed messages will be read to
