@@ -20,7 +20,7 @@ academic references in a .docx file using the =python-docx= package.
 
 - Golang
 
-** Usage
+* Usage
 
 If you have Go installed, you can run the main server with =go run
 ./server.go=. Navigate to localhost:8000 in a browser, and enjoy.
