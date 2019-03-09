@@ -6,8 +6,6 @@
 #+LANGUAGE:  en
 #+OPTIONS:   H:4 num:nil toc:2 p:t
 
-* Introduction
-
 This repository provides scripts that can allow you to validate
 academic references in a .docx file using the =python-docx= package.
 
@@ -17,3 +15,7 @@ academic references in a .docx file using the =python-docx= package.
 - =python-docx=
 - =ansi2html=
 - =git=
+
+** Optional requirements
+
+- Golang
