@@ -21,7 +21,7 @@ type appHandler struct {
 }
 
 type pageVariables struct {
-	Content   template.HTML
+	Content template.HTML
 }
 
 // For random strings (filenames)
@@ -44,7 +44,7 @@ func (templateinfo *appHandler) ServeHTTP(w http.ResponseWriter, r *http.Request
 
 	// Create a new struct of data to pass into template.html
 	TemplateVars := pageVariables{
-		Content:   content,
+		Content: content,
 	}
 
 	// Parse HTML template
@@ -132,24 +132,21 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 			// Return error message (stdout of docx.py) if applicable
 			if len(outStr) > 0 {
 				log.Print(outStr)
-				title := "References checker"
-				titlelink := strings.ToLower(title)
-				titlelink = strings.Replace(titlelink, " ", "-", -1)
 
-				// References
 				uploadHTMLBytes, readErr := ioutil.ReadFile("upload.html")
 				if readErr != nil {
 					fmt.Print(readErr)
 				}
 
 				uploadHTML := string(uploadHTMLBytes)
+
 				// Red color for error message contained in outStr
 				uploadHTML = uploadHTML + "<p><font color = #bb0000>" + outStr + "</font></p>"
 				content := template.HTML(uploadHTML)
 
 				// Struct for template.html
 				TemplateVars := pageVariables{
-					Content:   content,
+					Content: content,
 				}
 
 				// Parse HTML template
@@ -158,7 +155,7 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 					log.Print("Template parsing error: ", err)
 				}
 
-				// Write to template -- this will be served as HTML to the user
+				// Serve to user
 				err = t.Execute(w, TemplateVars)
 				if err != nil {
 					log.Print("Template executing error: ", err)
@@ -228,7 +225,7 @@ func main() {
 	log.Println("Listening...")
 
 	err := http.ListenAndServe("localhost:8000", mux)
-	
+
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err)
 	}
