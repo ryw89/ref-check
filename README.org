@@ -26,4 +26,4 @@ If you have Go installed, you can run the main server with =go run
 ./server.go=. Navigate to localhost:8000 in a browser, and enjoy.
 
 Alternatively, you may call =docx_refs.py= directly from the command
-line; e.g., =./docx_refs.py mypaper.docx.
+line; e.g., =./docx_refs.py mypaper.docx=.
