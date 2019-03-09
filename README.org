@@ -15,3 +15,5 @@ academic references in a .docx file using the =python-docx= package.
 
 - Python 3
 - =python-docx=
+- =ansi2html=
+- =git=
