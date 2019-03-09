@@ -29,7 +29,7 @@ line; e.g., =./docx_refs.py mypaper.docx=. In any case, you'll receive
 a document back telling you whether any of your references are out of
 order.
 
-* TODO
+* TODO Things to do
 
 - Determine whether citations are missing from references list
 - Determine whether references list has extraneous citations
