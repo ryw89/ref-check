@@ -1,0 +1,13 @@
+<form enctype="multipart/form-data" action="http://127.0.0.1:8000/upload" method="post">
+  Name of references section:
+  <br>
+  <input type="text" name="referencesname">
+  <br>
+  Name of section after references (if applicable):
+  <br>
+  <input type="text" name="afterref">
+  <br>
+  <input type="file" name="uploadfile" accept=".docx">
+  <input type="hidden" name="uploadtype" value="references">
+  <input type="submit" value="Upload">
+</form>
