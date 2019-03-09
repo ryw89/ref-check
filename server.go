@@ -38,8 +38,7 @@ func randSeq(n int) string {
 // Lock for uploadHandler
 var mutex sync.Mutex
 
-// Serve HTTP based on passed appHandler struct with title of page &
-// main content
+// Serve HTTP based on passed appHandler struct with content
 func (templateinfo *appHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	content := template.HTML(templateinfo.content)
 
