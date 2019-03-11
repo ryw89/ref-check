@@ -1,13 +1,33 @@
 <form enctype="multipart/form-data" action="http://127.0.0.1:8000/upload" method="post">
   Name of references section:
   <br>
-  <input type="text" name="referencesname">
+  <input type="text" name="referencesname" placeholder="References">
   <br>
-  Name of section after references (if applicable):
-  <br>
-  <input type="text" name="afterref">
+  <label>
+	Do you have a section after your reference section?<br>
+	<input type="radio" id="yes" name="yesOrNo" value="yes" onchange="displayQuestion(this.value)" />Yes</label>
+  <label>
+    <input type="radio" id="no" name="yesOrNo" value="no" onchange="displayQuestion(this.value)" />No</label>
+  <div id="yesQuestion" style="display:none;"><br/>
+    Name of section after references:
+    <input type="text" name="afterref" placeholder="Tables and Figures">
+  </div>
+
+  <div id="noQuestion" style="display:none;"></div>
+  </div>
+
   <br>
   <input type="file" name="uploadfile" accept=".docx">
   <input type="hidden" name="uploadtype" value="references">
   <input type="submit" value="Upload">
 </form>
+
+<script> function displayQuestion(answer) {
+     document.getElementById(answer + 'Question').style.display = "block";
+	 if (answer == "yes") {
+		 document.getElementById('noQuestion').style.display = "none";
+     } else if (answer == "no") {
+		 document.getElementById('yesQuestion').style.display = "none";
+     }
+ }
+</script>
