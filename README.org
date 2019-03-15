@@ -25,12 +25,10 @@ academic references in a .docx file using the =python-docx= package.
 If you have Go installed, you can run the main server with =go run
 ./server.go=. Navigate to localhost:8000 in a browser, and enjoy.
 Alternatively, you may call =docx_refs.sh= -- a wrapper around
-=docx_refs.py= -- from the command line, e.g., =./docx_refs.sh
-mypaper.docx 'References' 'Tables and Figure'=. Note that
-=./docx_refs.py= will *overwrite* your original file, so you probably
-don't want to call it directly. In any case, you'll receive an HTML
-document back telling you whether any of your references are out of
-order.
+=docx_refs.py= -- from the command line. Note that =./docx_refs.py=
+will *overwrite* your original file, so you probably don't want to
+call it directly. In any case, you'll receive an HTML document back
+telling you whether any of your references are out of order.
 
 * TODO Things to do
 
